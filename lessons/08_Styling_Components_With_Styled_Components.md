@@ -352,3 +352,8 @@ That's a lot of CSS. Hopefully you have a basic understanding of how
 styled-components works. There is a lot more to styled-components, but [their
 documentation](https://www.styled-components.com/) is a fantastic resource
 for those topics.
+
+The next lesson will deal with how to handle multiple views in the naive
+approach and then with `react-router`.
+
+Forward! [Lesson 9 - Views and Routing](09_Views_and_Routing.md)
