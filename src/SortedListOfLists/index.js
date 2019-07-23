@@ -19,17 +19,22 @@ display: flex;
 flex-direction: column;
 `;
 
-const Component = ({ todoLists }) => (
+const Component = ({ todoLists, onClick }) => (
   <ColumnDiv>
     {flow(
       sortBy('priority'),
-      map(({ priority, title }) => (
-        <SpacedTodoListTitle
-          key={title}
-          idx={priority}
-          title={title}
-        />
-      )),
+      map((list) => {
+        const { priority, title } = list;
+
+        return (
+          <SpacedTodoListTitle
+            key={title}
+            idx={priority}
+            title={title}
+            onClick={() => onClick(list)}
+          />
+        );
+      }),
     )(todoLists)}
   </ColumnDiv>
 );
@@ -40,5 +45,6 @@ Component.propTypes = {
       title: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 export default Component;

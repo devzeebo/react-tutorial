@@ -1,0 +1,68 @@
+[
+  {
+    "title": "My First List",
+    "priority": 1,
+    "items": [
+      {
+        "title": "First Item",
+        "checked": true
+      },
+      {
+        "title": "Second Item",
+        "checked": false
+      },
+      {
+        "title": "Third Item",
+        "checked": false
+      }
+    ]
+  },
+  {
+    "title": "React 101 Lesson Plan",
+    "priority": 2,
+    "items": [
+      {
+        "title": "Schedule ImprovingU",
+        "checked": true
+      },
+      {
+        "title": "Create Calendar Invite",
+        "checked": false
+      },
+      {
+        "title": "Show Up on Day 1",
+        "checked": false
+      },
+      {
+        "title": "Order Food for Day 2",
+        "checked": true
+      },
+      {
+        "title": "Show Up on Day 2",
+        "checked": true
+      }
+    ]
+  },
+  {
+    "title": "Shopping List",
+    "priority": 3,
+    "items": [
+      {
+        "title": "Ground Beef",
+        "checked": false
+      },
+      {
+        "title": "Spaghetti",
+        "checked": true
+      },
+      {
+        "title": "Pasta Sauce",
+        "checked": true
+      },
+      {
+        "title": "Salt",
+        "checked": false
+      }
+    ]
+  }
+]

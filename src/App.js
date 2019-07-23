@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import reduce from 'lodash/fp/reduce';
+import find from 'lodash/fp/find';
 
+import data from './data.json';
+
+import ExpandedTodoList from './ExpandedTodoList';
 import SortedListOfLists from './SortedListOfLists';
-import ListCreator from './ListCreator';
+import ListCreator from './SortedListOfLists/ListCreator';
 
 const CenteredDiv = styled.div`
 width: 100vw;
@@ -25,11 +30,7 @@ const addList = (todoLists, setTodoLists, newList) => {
 };
 
 const useReprioritizeLists = () => {
-  const [todoLists, setTodoLists] = useState([
-    { title: 'My First List', priority: 1 },
-    { title: 'React 101 Lesson Plan', priority: 2 },
-    { title: 'Shopping List', priority: 3 },
-  ]);
+  const [todoLists, setTodoLists] = useState(data);
 
   useEffect(() => {
     setTodoLists(reduce((newLists, list) => [
@@ -51,10 +52,22 @@ const Component = () => {
   const [todoLists, setTodoLists] = useReprioritizeLists();
 
   return (
-    <CenteredDiv>
-      <SortedListOfLists todoLists={todoLists} />
-      <ListCreator onAddList={newList => addList(todoLists, setTodoLists, newList)} />
-    </CenteredDiv>
+    <BrowserRouter>
+      <Route path="/" exact component={() => (
+        <CenteredDiv>
+          <SortedListOfLists
+            todoLists={todoLists}
+            onClick={list => (window.location = `/${list.title}`)}
+          />
+          <ListCreator onAddList={newList => addList(todoLists, setTodoLists, newList)} />
+        </CenteredDiv>
+      )} />
+      <Route path="/:title" exact component={({ match: { params: { title } } }) => (
+        <ExpandedTodoList
+          todoList={find({ title })(todoLists)}
+        />
+      )} />
+    </BrowserRouter>
   );
 };
 export default Component;

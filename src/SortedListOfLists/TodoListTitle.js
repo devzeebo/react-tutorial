@@ -20,8 +20,8 @@ cursor: pointer;
 }
 `;
 
-const TodoListTitle = ({ title, idx, className }) => (
-  <PaddedCard className={className}>
+const TodoListTitle = ({ title, idx, ...props }) => (
+  <PaddedCard {...props}>
     <Priority>{idx}.</Priority>
     <span>{toUpper(title)}</span>
   </PaddedCard>
