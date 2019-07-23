@@ -61,7 +61,7 @@ application to get our feet wet.
 Create a new file named `App.js` inside the `src` folder. Inside this file
 we'll declare our component:
 
-```js
+```jsx
 import React from 'react';  // import the react package into constant React
 
 const App = () => (         // This is an ES6 function! It makes `this` make sense
@@ -77,7 +77,7 @@ encounter as we go.
 
 #### Import Statements
 
-```js
+```jsx
 import React from 'react';
 ```
 This is called an `import` statement. It imports the contents of the `react`
@@ -86,7 +86,7 @@ this later.
 
 #### ES6 Functions
 
-```js
+```jsx
 const add = (a, b) => a + b;
 const add = (a, b) => { return a + b; }
 function add(a, b) { return a + b; }
@@ -105,14 +105,14 @@ implicit returns for **SINGLE STATEMENT FUNCTIONS**. If you want to return
 something and put curly braces like in the second example, you **MUST** put
 return. Otherwise its a void function.
 
-```js
+```jsx
 const add = (a, b) => a + b;     // returns an int
 const add = (a, b) => { a + b; } // returns undefined
 ```
 
 #### JSX
 
-```html
+```jsx
 <div>Hello World!</div>
 ```
 
@@ -128,7 +128,7 @@ string** syntax of `{ /* javascript goes here */ }`. Anything inside the
 curly braces is JavaScript. You can write a **SINGLE** statement inside the
 curly braces. Whatever it evaluates to will be printed in the HTML inline.
 
-```js
+```jsx
 (<div>{1 + 2}</div>) // output: <div>3</div>
 
 (<div>
@@ -152,7 +152,7 @@ into it's own Component.
 
 #### Export
 
-```js
+```jsx
 export default App;
 ```
 
