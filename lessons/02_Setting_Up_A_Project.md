@@ -185,5 +185,5 @@ If you navigate to `http://localhost:3000` you should see the text "Hello
 World!" on the screen! Congratulations! You've rendered your first React
 component!
 
-You can now continue by checking out `lesson-03`
-to progress to [Lesson 3 - Passing Data Between Components](03_Passing_Data_Between_Components.md).
+You can now continue by merging branch `lesson-03` and continuing to [Lesson
+3 - Passing Data Between Components](03_Passing_Data_Between_Components.md).
