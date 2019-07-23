@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
 import reduce from 'lodash/fp/reduce';
 
 import SortedListOfLists from './SortedListOfLists';
 import ListCreator from './ListCreator';
+
+const CenteredDiv = styled.div`
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+`;
 
 const addList = (todoLists, setTodoLists, newList) => {
   const newLists = [
@@ -41,10 +51,10 @@ const Component = () => {
   const [todoLists, setTodoLists] = useReprioritizeLists();
 
   return (
-    <div>
+    <CenteredDiv>
       <SortedListOfLists todoLists={todoLists} />
       <ListCreator onAddList={newList => addList(todoLists, setTodoLists, newList)} />
-    </div>
+    </CenteredDiv>
   );
 };
 export default Component;
