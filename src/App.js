@@ -1,19 +1,16 @@
 import React from 'react';
-import get from 'lodash/fp/get';
 
-import TodoListTitle from './TodoListTitle';
+import SortedListOfLists from './SortedListOfLists';
 
 const todoLists = [
-  { title: 'My First List' },
-  { title: 'React 101 Lesson Plan' },
-  { title: 'Shopping List' },
+  { title: 'My First List', priority: 1 },
+  { title: 'React 101 Lesson Plan', priority: 2 },
+  { title: 'Shopping List', priority: 3 },
 ];
 
 const Component = () => (
   <div>
-    <TodoListTitle idx={0} title={get('[0].title', todoLists)} />
-    <TodoListTitle idx={1} title={get('[1].title', todoLists)} />
-    <TodoListTitle idx={2} title={get('[2].title', todoLists)} />
+    <SortedListOfLists todoLists={todoLists} />
   </div>
 );
 export default Component;
