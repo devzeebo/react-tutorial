@@ -1,6 +1,7 @@
 import React from 'react';
-import toUpper from 'lodash/fp/toUpper';
 import get from 'lodash/fp/get';
+
+import TodoListTitle from './TodoListTitle';
 
 const todoLists = [
   { title: 'My First List' },
@@ -10,9 +11,9 @@ const todoLists = [
 
 const Component = () => (
   <div>
-    <div>1. {toUpper(get('[0].title', todoLists))}</div>
-    <div>2. {toUpper(get('[1].title', todoLists))}</div>
-    <div>3. {toUpper(get('[2].title', todoLists))}</div>
+    <TodoListTitle idx={0} title={get('[0].title', todoLists)} />
+    <TodoListTitle idx={1} title={get('[1].title', todoLists)} />
+    <TodoListTitle idx={2} title={get('[2].title', todoLists)} />
   </div>
 );
 export default Component;

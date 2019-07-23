@@ -179,7 +179,7 @@ npm run start:dev
 You'll get a server to start, transpile all your source code into something
 the browser will understand, linting support, AND watch for changes!
 
-## Conclusions
+# Conclusions
 
 If you navigate to `http://localhost:3000` you should see the text "Hello
 World!" on the screen! Congratulations! You've rendered your first React

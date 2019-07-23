@@ -67,7 +67,7 @@ where `XX` is the lesson you want to merge into your branch. You'll have to
 deal with any merge conflicts you have, but if you're following along they
 should be minimal and easy to deal with.
 
-# Conclusion
+# Conclusions
 
 That's it! You now have `nvm`, `node`, and `npm` installed and ready to use,
 and have checked out the first lesson in this tutorial!
