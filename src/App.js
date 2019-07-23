@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import reduce from 'lodash/fp/reduce';
 
 import SortedListOfLists from './SortedListOfLists';
-import AddListButton from './AddListButton';
+import ListCreator from './ListCreator';
 
 const addList = (todoLists, setTodoLists, newList) => {
   const newLists = [
@@ -14,7 +14,7 @@ const addList = (todoLists, setTodoLists, newList) => {
   setTodoLists(newLists);
 };
 
-const Component = () => {
+const useReprioritizeLists = () => {
   const [todoLists, setTodoLists] = useState([
     { title: 'My First List', priority: 1 },
     { title: 'React 101 Lesson Plan', priority: 2 },
@@ -31,10 +31,19 @@ const Component = () => {
     ], [])(todoLists));
   }, [todoLists.length]);
 
+  return [
+    todoLists,
+    setTodoLists,
+  ];
+};
+
+const Component = () => {
+  const [todoLists, setTodoLists] = useReprioritizeLists();
+
   return (
     <div>
       <SortedListOfLists todoLists={todoLists} />
-      <AddListButton onAddList={newList => addList(todoLists, setTodoLists, newList)} />
+      <ListCreator onAddList={newList => addList(todoLists, setTodoLists, newList)} />
     </div>
   );
 };
