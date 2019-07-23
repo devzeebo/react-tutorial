@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.head.appendChild(createElement('style', {}, `
     body {
       font-family: Roboto;
+      margin: 0;
     }
   `));
 
