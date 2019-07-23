@@ -15,6 +15,7 @@ module.exports = {
   resolve: {
     extensions: ['.js'],
   },
+  mode: 'development',
   devtool: 'inline-source-map',
   plugins: [],
   module: {
