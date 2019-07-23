@@ -47,21 +47,29 @@ git clone https://github.com/devzeebo/react-tutorial.git
 
 ## Using this Repository
 
-This tutorial repository is tagged with `lesson-XX` to make keeping track of
-the lessons easy. You are free to make your own branches, pull lessons into
-your branch, or reset and join back with the lesson. I strongly recommend
-starting at `lesson-01`, creating your own branch, and then running
+This tutorial repository has branches named `lesson-XX` to make keeping track
+of the lessons easy. You are free to make your own branches, pull lessons
+into your branch, or reset and join back with the lesson. I strongly
+recommend starting with:
 ```
-git pull lesson-XX
+git checkout lesson-01
+git checkout -b <your-branch-name>
 ```
 
-where `XX` is the lesson you want to merge into your file. You'll have to
+to create a new branch off of Lesson 1. Then, when you progress to another
+lesson, run:
+
+```
+git merge lesson-XX
+```
+
+where `XX` is the lesson you want to merge into your branch. You'll have to
 deal with any merge conflicts you have, but if you're following along they
 should be minimal and easy to deal with.
-
-to progress to [Lesson 2 - Your First React App](02_Setting_Up_A_Project.md)!
 
 # Conclusion
 
 That's it! You now have `nvm`, `node`, and `npm` installed and ready to use,
 and have checked out the first lesson in this tutorial!
+
+Continue to [Lesson 2 - Your First React App](02_Setting_Up_A_Project.md)!
