@@ -223,4 +223,4 @@ practiced **extracting a component**. We also learned about `lodash`
 property when rendering arrays.
 
 Commit your code to your branch, `git merge lesson-05`, and continue on to
-[Lesson 5 - Callbacks](05_Callbacks.md).
+[Lesson 5 - Callbacks](05_Events_And_Callbacks.md).
